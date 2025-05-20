@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4b0ikxjckxnh"]
+
+[ext_resource type="Script" uid="uid://brbabnh0rodtr" path="res://JoyStick.cs" id="1_0e48y"]
+
+[node name="JoyStick" type="Node2D" node_paths=PackedStringArray("label")]
+script = ExtResource("1_0e48y")
+label = NodePath("")

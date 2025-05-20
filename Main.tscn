@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://03o5d6usl5rr"]
+
+[ext_resource type="PackedScene" uid="uid://b4b0ikxjckxnh" path="res://JoyStickRight.tscn" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://c3mvc58aefpb4" path="res://JoyStickRight.cs" id="2_r0du0"]
+[ext_resource type="PackedScene" uid="uid://by86j3kqky312" path="res://JoyStickLeft.tscn" id="2_uu6xs"]
+
+[node name="Main" type="Node2D"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+layout_mode = 0
+offset_right = 322.0
+offset_bottom = 187.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Left:"
+
+[node name="LeftLabel" type="Label" parent="UI/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "(0,0)"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Right:"
+
+[node name="RightLabel" type="Label" parent="UI/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "(0,0)"
+
+[node name="JoyStickRight" parent="." node_paths=PackedStringArray("label") instance=ExtResource("1_glv2v")]
+position = Vector2(710, 300)
+script = ExtResource("2_r0du0")
+label = NodePath("../UI/VBoxContainer/HBoxContainer2/RightLabel")
+
+[node name="JoyStickLeft" parent="." node_paths=PackedStringArray("label") instance=ExtResource("2_uu6xs")]
+position = Vector2(310, 300)
+label = NodePath("../UI/VBoxContainer/HBoxContainer/LeftLabel")
