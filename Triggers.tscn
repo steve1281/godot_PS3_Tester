@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnadnpl5spoog"]
+
+[ext_resource type="Script" uid="uid://dlbfjubedyms7" path="res://Triggers.cs" id="1_qou0b"]
+[ext_resource type="Texture2D" uid="uid://chbjfvbi4h7mx" path="res://41652-quick-look-pdp-dual-triggers-ps3.png" id="2_1xodr"]
+
+[node name="Triggers" type="Node2D" node_paths=PackedStringArray("LeftTrigger", "RightTrigger")]
+script = ExtResource("1_qou0b")
+LeftTrigger = NodePath("LeftTrigger")
+RightTrigger = NodePath("RightTrigger")
+
+[node name="LeftTrigger" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(308, 183)
+texture = ExtResource("2_1xodr")
+region_enabled = true
+region_rect = Rect2(22.7575, 134.689, 79.3388, 77.6859)
+
+[node name="RightTrigger" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(716, 183)
+texture = ExtResource("2_1xodr")
+region_enabled = true
+region_rect = Rect2(22.7575, 134.689, 79.3388, 77.6859)

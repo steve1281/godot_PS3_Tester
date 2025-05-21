@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddbrnuo4f32na"]
+
+[ext_resource type="Script" uid="uid://ckd8opurnak6i" path="res://Shoulder.cs" id="1_iwstt"]
+[ext_resource type="Texture2D" uid="uid://crmw0wmqckaje" path="res://images.jpg" id="2_loo8x"]
+
+[node name="Shoulder" type="Node2D" node_paths=PackedStringArray("LeftShoulder", "RightShoulder")]
+scale = Vector2(2, 2)
+script = ExtResource("1_iwstt")
+LeftShoulder = NodePath("LeftShoulder")
+RightShoulder = NodePath("RightShoulder")
+
+[node name="LeftShoulder" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(154.5, 55)
+texture = ExtResource("2_loo8x")
+region_enabled = true
+region_rect = Rect2(35, 0, 52, 24.3333)
+
+[node name="RightShoulder" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(356.5, 54)
+texture = ExtResource("2_loo8x")
+region_enabled = true
+region_rect = Rect2(35, 0, 52, 24.3333)

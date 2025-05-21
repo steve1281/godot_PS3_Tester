@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf6sxmle0ijou"]
+
+[ext_resource type="Script" uid="uid://suhnj2kvggp7" path="res://Sticks.cs" id="1_1eqyn"]
+[ext_resource type="Texture2D" uid="uid://crmw0wmqckaje" path="res://images.jpg" id="2_g7w8g"]
+
+[node name="Sticks" type="Node2D" node_paths=PackedStringArray("LeftStick", "RightStick")]
+scale = Vector2(2, 2)
+script = ExtResource("1_1eqyn")
+LeftStick = NodePath("LeftStick")
+RightStick = NodePath("RightStick")
+
+[node name="LeftStick" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(155, 186)
+texture = ExtResource("2_g7w8g")
+region_enabled = true
+region_rect = Rect2(84.9447, 93.6113, 36.3636, 39.1185)
+
+[node name="RightStick" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(356, 189)
+texture = ExtResource("2_g7w8g")
+region_enabled = true
+region_rect = Rect2(84.9447, 93.6113, 36.3636, 39.1185)
