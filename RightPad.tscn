@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://bloyn810hukqv"]
+
+[ext_resource type="Script" uid="uid://5lwprutt1o66" path="res://RightPad.cs" id="1_73kfa"]
+[ext_resource type="Texture2D" uid="uid://crmw0wmqckaje" path="res://images.jpg" id="2_4ued5"]
+
+[node name="RightPad" type="Node2D" node_paths=PackedStringArray("Triangle", "Square", "Circle", "Cross")]
+script = ExtResource("1_73kfa")
+Triangle = NodePath("Triangle")
+Square = NodePath("Square")
+Circle = NodePath("Circle")
+Cross = NodePath("Cross")
+
+[node name="Triangle" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(908, 134)
+texture = ExtResource("2_4ued5")
+region_enabled = true
+region_rect = Rect2(218.437, 35.5596, 24.9287, 24.0509)
+
+[node name="Square" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(878, 160)
+texture = ExtResource("2_4ued5")
+region_enabled = true
+region_rect = Rect2(195.857, 59.3924, 22.3924, 23.0192)
+
+[node name="Circle" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(938, 159)
+texture = ExtResource("2_4ued5")
+region_enabled = true
+region_rect = Rect2(244.694, 58.9092, 21.1483, 23.0144)
+
+[node name="Cross" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(908, 189)
+texture = ExtResource("2_4ued5")
+region_enabled = true
+region_rect = Rect2(219.33, 82.9566, 24.2584, 21.0452)
